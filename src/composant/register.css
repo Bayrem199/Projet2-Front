@@ -1,0 +1,146 @@
+/* Styles généraux pour le body */
+body {
+    background: linear-gradient(135deg, #000000, #220000 80%);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+  }
+  
+  /* Conteneur pour la page Register */
+  .register-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 85px; /* Ajout pour positionner sous la navbar */
+    padding: 20px;
+  }
+  
+  /* Register Box */
+  .register-box {
+    background: rgba(255, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+    width: 400px;
+    animation: fadeIn 1.2s ease-out;
+  }
+  
+  .register-title {
+    font-size: 32px;
+    color: #ff0000;
+    text-shadow: 0 0 10px #ff0000;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Input Group */
+  .input-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  input,
+  select {
+    width: 100%;
+    padding: 12px 40px 12px 12px;
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+    background: #0a0a0a;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  input:focus,
+  select:focus {
+    border-color: #ff3333;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.7);
+  }
+  
+  .icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #ff0000;
+  }
+  
+  /* Toggle Button */
+  .toggle-button {
+    background: #ff0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease, background 0.3s ease;
+    margin-bottom: 20px;
+  }
+  
+  .toggle-button:hover {
+    background: #d10000;
+    transform: scale(1.05);
+  }
+  
+  /* Register Button */
+  .register-button {
+    width: 100%;
+    padding: 12px;
+    background: #ff0000;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+    box-shadow: 0 5px 20px rgba(255, 0, 0, 0.7);
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .register-button:hover {
+    transform: scale(1.05);
+    background: #d10000;
+  }
+  
+  /* Login Link */
+  .login-link {
+    text-align: right;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .login-link span {
+    color: #ff3333;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .login-link span:hover {
+    color: #ff0000;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.8);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .register-logo {
+    display: block;
+    margin: 0 auto 20px; /* Centrer le logo et ajouter un espace en bas */
+    width: 100px; /* Ajustez la taille selon vos besoins */
+    height: auto; /* Conserver les proportions */
+  }
+  

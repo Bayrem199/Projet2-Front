@@ -1,0 +1,194 @@
+/* Style de la navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 11px 0; /* Réduit la taille de la navbar */
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  transform: translateY(0);
+  animation: fadeIn 1s ease-out;
+}
+
+.navbar-scrolled {
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Animation fade-in pour la navbar */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Conteneur de la navbar */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Logo à gauche */
+.navbar-logo {
+  flex: 1;
+  transform: perspective(500px) rotateY(0deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-logo img {
+  height: 62px; /* Réduit la taille du logo */
+  width: auto;
+  transition: transform 0.5s ease, filter 0.3s ease-in-out;
+  filter: brightness(1.2);
+}
+
+.navbar-logo:hover img {
+  transform: scale(1.1) rotateY(15deg);
+  filter: brightness(1.5);
+}
+
+/* Zone centrale pour les liens */
+.navbar-center {
+  display: flex;
+  flex-grow: 2;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-list {
+  display: flex;
+  gap: 22px; /* Réduit l'espace entre les éléments de la liste */
+  list-style: none;
+  padding-left: 0;
+}
+
+.navbar-item {
+  position: relative;
+}
+
+.navbar-link {
+  font-size: 1.2rem; /* Réduit la taille de la police */
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+  font-weight: 500;
+}
+
+.navbar-link:hover {
+  transform: translateY(-5px) scale(1.1);
+  color: #f80000;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+}
+
+.navbar-link:after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #f80000;
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover:after {
+  width: 100%;
+}
+
+/* Actions (Login, Cart) à droite */
+.navbar-actions {
+  display: flex;
+  gap: 15px; /* Réduit l'espace entre les actions */
+  align-items: center;
+}
+
+.navbar-login,
+.navbar-cart {
+  font-size: 1.2rem; /* Réduit la taille de la police */
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar-login:hover,
+.navbar-cart:hover {
+  color: #f80000;
+  transform: translateY(-3px) scale(1.1);
+  text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.6);
+}
+
+.navbar-icon {
+  font-size: 1.2rem; /* Réduit la taille de l'icône */
+  transition: transform 0.3s ease;
+}
+
+.navbar-icon:hover {
+  transform: rotate(360deg);
+}
+
+/* Barre de recherche */
+.navbar-search {
+  position: absolute;
+  top: 10px; /* Ajuste la position de la barre de recherche */
+  right: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-input {
+  padding: 8px; /* Réduit le padding de l'input */
+  font-size: 0.9rem; /* Réduit la taille de la police */
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  transition: border 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #f80000;
+}
+
+.search-button {
+  background-color: #f80000;
+  border: none;
+  padding: 8px; /* Réduit le padding du bouton */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #ff4d4d;
+}
+
+.search-button .navbar-icon {
+  font-size: 1.2rem;
+}
+/* Logo à gauche */
+.navbar-logo {
+flex: 1;
+transform: perspective(500px) rotateY(0deg);
+transition: transform 0.3s ease-in-out;
+} 

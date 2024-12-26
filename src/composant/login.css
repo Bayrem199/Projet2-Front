@@ -1,0 +1,203 @@
+/* Global Styles */
+body {
+ 
+  background-size: cover; /* Couvre tout l'écran */
+  background-position: center; /* Centre l'image */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Container Principal */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+/* Contenu Principal */
+.login-content {
+  display: flex;
+  align-items: center; /* Centre verticalement le contenu (formulaire + switch) */
+  gap: 20px; /* Espacement entre le formulaire et le bouton switch */
+  position: relative;
+  z-index: 2;
+}
+
+/* Light Beam (Effet de lumière) */
+.light-beam {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 0, 0, 0.5), transparent);
+  filter: blur(30px);
+  z-index: 1;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Boîte de connexion */
+.login-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 10px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.login-title {
+  font-size: 28px;
+  color: #ff0000;
+  text-shadow: 0 0 8px #ff0000;
+  margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 40px 12px 12px;
+  border: none;
+  border-radius: 5px;
+  background: #0a0e17;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  box-shadow: inset 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #ff0000;
+}
+
+/* Options */
+.options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.options a {
+  color: #ff0000;
+  text-decoration: none;
+}
+
+.options a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background: #ff0000;
+  color: #0a0e17;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.login-button:hover {
+  transform: scale(1.05);
+}
+
+/* Register Link */
+.register {
+  margin-top: 10px;
+  font-size: 14px;
+  color: white;
+}
+
+.register a {
+  color: #ff0000;
+  text-decoration: none;
+}
+
+.register a:hover {
+  text-decoration: underline;
+}
+
+/* Switch Button */
+.switch {
+  width: 60px;
+  height: 30px;
+  background: #131722;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.switch:hover {
+  background: #1b1f2e;
+}
+
+.switch-button {
+  color: #ff0000;
+  font-weight: bold;
+  font-size: 16px;
+  text-shadow: 0 0 5px rgba(255, 0, 0, 0.7);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scaleY(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+/* Ajout de la classe pour le texte rouge avec effet de survol */
+.red-text {
+  color: #ff0000; /* Couleur rouge */
+  cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
+  transition: color 0.3s ease; /* Transition douce pour le changement de couleur */
+}
+
+.red-text:hover {
+  color: #ffcccc; /* Couleur plus claire au survol */
+}
+
+/* Couleur blanche pour "Remember me" */
+.options label {
+  color: white; /* Couleur blanche */
+}
+
+/* Couleur blanche pour "Don't have an account?" */
+.register {
+  color: white; /* Couleur blanche */
+}
+
+/* Ajout de styles pour le contour du formulaire lorsque la lumière est allumée */
+.login-box.light-on {
+  border: 2px solid #ff0000; /* Contour rouge lorsque la lumière est allumée */
+}

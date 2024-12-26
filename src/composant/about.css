@@ -1,0 +1,72 @@
+/* about.css */
+.about-container {
+    background: linear-gradient(135deg, #1a1a1a, #330000);
+    color: #fff;
+    padding: 50px 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+  }
+  
+  .about-content {
+    max-width: 1200px;
+    text-align: center;
+    transform-style: preserve-3d;
+  }
+  
+  .about-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #ff4d4d;
+  }
+  
+  .about-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    color: #ccc;
+  }
+  
+  .about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .about-card {
+    background: rgba(255, 77, 77, 0.1);
+    border: 1px solid rgba(255, 77, 77, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  
+  .about-card:hover {
+    transform: rotateY(5deg) rotateX(5deg) scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 77, 77, 0.5);
+  }
+  
+  .about-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ff4d4d;
+  }
+  
+  .about-card-text {
+    font-size: 1rem;
+    color: #ddd;
+  }
+  
+  @media (max-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
